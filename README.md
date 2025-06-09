@@ -1,0 +1,3 @@
+# responseHeader
+
+请求什么header，返回什么header，主要用于测试header返回，以及代理请求后请求和返回的情况
