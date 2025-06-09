@@ -3,7 +3,8 @@ FROM registry.cn-hangzhou.aliyuncs.com/startops-base/golang-builder:1.20 AS buil
 WORKDIR /go/src
 ADD . /go/src
 
-RUN GOPROXY=https://goproxy.cn;go build main.go
+ENV GOPROXY=https://goproxy.cn
+RUN go build main.go
 
 #FROM docker.io/library/busybox:stable-glibc
 FROM registry.cn-hangzhou.aliyuncs.com/startops-base/debian-runtime:11.7-slim
