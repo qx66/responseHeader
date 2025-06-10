@@ -4,6 +4,7 @@ WORKDIR /go/src
 ADD . /go/src
 
 ENV GOPROXY=https://goproxy.cn
+ENV CGO_ENABLED=0
 RUN go build main.go
 
 #FROM docker.io/library/busybox:stable-glibc
